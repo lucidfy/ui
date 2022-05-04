@@ -2,4 +2,6 @@
     export let content: any
 </script>
 
-{@html content}
+<div class="prose prose-md max-w-[80%]">
+    {@html content}
+</div>
