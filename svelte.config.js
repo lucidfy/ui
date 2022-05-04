@@ -3,12 +3,15 @@ import { resolve } from 'path'
 // import adapter from '@sveltejs/adapter-auto'
 import adapter from '@sveltejs/adapter-node'
 
-let envPort = 3000
 let routeFolder = process.env.ROUTE_FOLDER
-
-if (process.env.npm_config_argv !== undefined) {
-  const argv = JSON.parse(process.env.npm_config_argv)
-  envPort = parseInt(argv['remain'][parseInt(argv['remain'].indexOf('--port') + 1)])
+let envPort = 3000
+switch (routeFolder) {
+  case "guest":
+    envPort = 8331
+    break;
+  case "docs":
+    envPort = 8332
+    break;
 }
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -18,7 +21,10 @@ const config = {
   preprocess: preprocess(),
 
   kit: {
-    adapter: adapter({ out: `build/${routeFolder}` }),
+    outDir: `.svelte-kit/${routeFolder}`,
+    adapter: adapter({
+      out: `build/${routeFolder}`
+    }),
 
     // Override http methods in the Todo forms
     methodOverride: {
@@ -33,8 +39,8 @@ const config = {
     vite: {
       server: {
 	      hmr: {
-          port: envPort, // e.g: 8081
-          clientPort: envPort + 250, // e.g 8081 + 250 = 8331
+          port: envPort,
+          clientPort: envPort,
         }
       },
       resolve: {
