@@ -6,24 +6,28 @@ import adapter from '@sveltejs/adapter-node'
 let routeFolder = process.env.ROUTE_FOLDER
 let envPort = 3000
 switch (routeFolder) {
-  case "guest":
+  case 'guest':
     envPort = 8331
-    break;
-  case "docs":
+    break
+  case 'docs':
     envPort = 8332
-    break;
+    break
 }
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
-  preprocess: preprocess(),
+  preprocess: [
+    preprocess({
+      postcss: true,
+    }),
+  ],
 
   kit: {
     outDir: `.svelte-kit/${routeFolder}`,
     adapter: adapter({
-      out: `build/${routeFolder}`
+      out: `build/${routeFolder}`,
     }),
 
     // Override http methods in the Todo forms
@@ -38,10 +42,13 @@ const config = {
 
     vite: {
       server: {
-	      hmr: {
+        // fs: {
+        //   strict: (process.env.NODE_ENV === 'production') ? true : false,
+        // },
+        hmr: {
           port: envPort,
           clientPort: envPort,
-        }
+        },
       },
       resolve: {
         alias: {

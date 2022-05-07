@@ -4,7 +4,7 @@ import type { Handle } from '@sveltejs/kit';
 
 export const handle: Handle = async ({ event, resolve }) => {
 	// skip the hook to prevent from running if ever
-	// we're calling ./setup-docker
+	// we're executing ./setuo-container
 	if (process.env.LUCID_DOCKER_SETTING_UP) {
 		const response = await resolve(event)
 		return response

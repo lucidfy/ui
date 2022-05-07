@@ -19,7 +19,7 @@
           <div class="h-32 md:h-auto md:w-1/2">
             <img
               aria-hidden="true"
-              class="object-cover w-full h-full dark:hidden"
+              class="object-cover w-full h-full"
               src="https://picsum.photos/800/800"
               alt="Office"
             />
