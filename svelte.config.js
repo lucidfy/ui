@@ -42,9 +42,9 @@ const config = {
 
     vite: {
       server: {
-        // fs: {
-        //   strict: (process.env.NODE_ENV === 'production') ? true : false,
-        // },
+        fs: {
+          strict: (process.env.NODE_ENV === 'production') ? true : false,
+        },
         hmr: {
           port: envPort,
           clientPort: envPort,
