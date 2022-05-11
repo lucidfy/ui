@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
-  // purge: ['src/app.html', 'src/**/*.svelte'],
+  purge: ['src/app.html', 'src/**/*.svelte'],
   plugins: [
     require('@tailwindcss/typography'),
     require('daisyui'),
@@ -19,7 +19,5 @@ module.exports = {
     },
     "list-none",
   ],
-  daisyui: {
-    // themes: ['corporate'],
-  },
+  daisyui: {},
 }
