@@ -41,6 +41,9 @@ const config = {
     },
 
     vite: {
+      optimizeDeps: {
+        include: ["highlight.js", "highlight.js/lib/core"],
+      },
       server: {
         fs: {
           strict: (process.env.NODE_ENV === 'production') ? true : false,
@@ -48,6 +51,7 @@ const config = {
         hmr: {
           port: envPort,
           clientPort: envPort,
+          protocol: 'ws',
         },
       },
       resolve: {

@@ -7,7 +7,7 @@ declare namespace App {
 		// sveltekit default
 		userid: string;
 
-		// gorvel
+		// lucid
 		user: any;
 		session: string;
 	}
@@ -15,7 +15,7 @@ declare namespace App {
 	interface Platform { }
 
 	interface Session {
-		// gorvel
+		// lucid
 		user: any;
 	}
 

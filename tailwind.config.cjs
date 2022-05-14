@@ -1,14 +1,30 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+// const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
-  purge: ['src/app.html', 'src/**/*.svelte'],
+  purge: [
+    './src/*.html',
+    './src/**/*.html',
+    './src/**/*.svelte',
+  ],
   plugins: [
     require('@tailwindcss/typography'),
     require('daisyui'),
   ],
   theme: {
-    extend: {},
-    ...defaultTheme,
+    extend: {
+      typography: {
+        default: {
+          // css: {
+          //   pre: false,
+          //   code: false,
+          //   'pre code': false,
+          //   'code::before': false,
+          //   'code::after': false
+          // },
+        },
+      },
+    },
+    // ...defaultTheme,
   },
   safelist: [
     {
@@ -17,7 +33,7 @@ module.exports = {
     {
       pattern: /opacity-.+/,
     },
-    "list-none",
+    'list-none',
   ],
   daisyui: {},
 }

@@ -153,8 +153,12 @@ export const pages : Page[] = [
     ],
   },
   {
-    name: 'HTTP',
+    name: 'Basics',
     items: [
+      {
+        name: 'Configuration',
+        href: '/configuration',
+      },
       {
         name: 'Routing',
         href: '/routing',
@@ -168,8 +172,28 @@ export const pages : Page[] = [
         href: '/handlers',
       },
       {
-        name: 'Form Validations',
-        href: '/form-validations',
+        name: 'Validations',
+        href: '/validations',
+      },
+      {
+        name: 'Session',
+        href: '/session',
+      },
+      {
+        name: 'Cookie',
+        href: '/cookie',
+      },
+      {
+        name: 'Cache (in progress)',
+        href: '/cache',
+      },
+      {
+        name: 'Translations',
+        href: '/translations',
+      },
+      {
+        name: 'Cryptography',
+        href: '/cryptography',
       },
     ],
   },
@@ -210,6 +234,19 @@ export const pages : Page[] = [
         name: 'Validator',
         href: '/core-validator',
       }
+    ]
+  },
+  {
+    name: 'API',
+    items: [
+      {
+        name: 'Request',
+        href: '/api-request',
+      },
+      {
+        name: 'Response',
+        href: '/api-response',
+      },
     ]
   }
 ]

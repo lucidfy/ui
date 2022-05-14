@@ -24,7 +24,7 @@
       <li class="menu-title"><span>{name}</span></li>
     {/if}
     {#if name != 'excluded'}
-      {#each items as { name, href, icon, badge, hidden, highlightAnotherItem }, i (i)}
+      {#each items as { name, href, icon, badge, hidden }, i (i)}
         {#if !hidden}
           <li>
             <a
