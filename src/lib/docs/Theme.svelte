@@ -3,7 +3,9 @@
   export let btnClasses = "btn-ghost"
   export let contentClasses = "mt-16"
   import { onMount } from "svelte";
+  import { createEventDispatcher } from 'svelte';
 
+  const dispatch = createEventDispatcher();
   const defaultTheme = "cmyk"
 
   onMount(() => {
@@ -14,9 +16,10 @@
 
   const toggleTheme = (theme?: string) => {
     theme = theme ?? localStorage.theme ?? defaultTheme
-
     window.document.documentElement.setAttribute("data-theme", theme)
     localStorage.theme = theme
+
+    dispatch('change', {theme})
   }
 </script>
 

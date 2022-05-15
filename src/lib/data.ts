@@ -3,121 +3,135 @@ export interface Theme {
   id: string,
 }
 
+export const coloredThemes: string[] = [
+  'dark',
+  'synthwave',
+  'halloween',
+  'forest',
+  'aqua',
+  'black',
+  'luxury',
+  'dracula',
+  'business',
+  'night',
+  'coffee',
+]
+
 export const themes: Theme[] = [
   {
-    name: "🌝  light",
+    name: "🌝 light",
     id: "light",
   },
   {
-    name: "🌚  dark",
+    name: "🌚 dark",
     id: "dark",
   },
   {
-    name: "🧁  cupcake",
+    name: "🧁 cupcake",
     id: "cupcake",
   },
   {
-    name: "🐝  bumblebee",
+    name: "🐝 bumblebee",
     id: "bumblebee",
   },
   {
-    name: "✳️  Emerald",
+    name: "✳️ Emerald",
     id: "emerald",
   },
   {
-    name: "🏢  Corporate",
+    name: "🏢 Corporate",
     id: "corporate",
   },
   {
-    name: "🌃  synthwave",
+    name: "🌃 synthwave",
     id: "synthwave",
   },
   {
-    name: "👴  retro",
+    name: "👴 retro",
     id: "retro",
   },
   {
-    name: "🤖  cyberpunk",
+    name: "🤖 cyberpunk",
     id: "cyberpunk",
   },
   {
-    name: "🌸  valentine",
+    name: "🌸 valentine",
     id: "valentine",
   },
   {
-    name: "🎃  halloween",
+    name: "🎃 halloween",
     id: "halloween",
   },
   {
-    name: "🌷  garden",
+    name: "🌷 garden",
     id: "garden",
   },
   {
-    name: "🌲  forest",
+    name: "🌲 forest",
     id: "forest",
   },
   {
-    name: "🐟  aqua",
+    name: "🐟 aqua",
     id: "aqua",
   },
   {
-    name: "👓  lofi",
+    name: "👓 lofi",
     id: "lofi",
   },
   {
-    name: "🖍  pastel",
+    name: "🖍 pastel",
     id: "pastel",
   },
   {
-    name: "🧚‍♀️  fantasy",
+    name: "🧚‍♀️ fantasy",
     id: "fantasy",
   },
   {
-    name: "📝  Wireframe",
+    name: "📝 Wireframe",
     id: "wireframe",
   },
   {
-    name: "🏴  black",
+    name: "🏴 black",
     id: "black",
   },
   {
-    name: "💎  luxury",
+    name: "💎 luxury",
     id: "luxury",
   },
   {
-    name: "🧛‍♂️  dracula",
+    name: "🧛‍♂️ dracula",
     id: "dracula",
   },
   {
-    name: "🖨  CMYK",
+    name: "🖨 CMYK",
     id: "cmyk",
   },
   {
-    name: "🍁  Autumn",
+    name: "🍁 Autumn",
     id: "autumn",
   },
   {
-    name: "💼  Business",
+    name: "💼 Business",
     id: "business",
   },
   {
-    name: "💊  Acid",
+    name: "💊 Acid",
     id: "acid",
   },
   {
-    name: "🍋  Lemonade",
+    name: "🍋 Lemonade",
     id: "lemonade",
   },
   {
-    name: "🌙  Night",
+    name: "🌙 Night",
     id: "night",
   },
   {
-    name: "☕️  Coffee",
+    name: "☕️ Coffee",
     id: "coffee",
   },
   {
-    name: "❄️  Winter",
+    name: "❄️ Winter",
     id: "winter",
   },
 ]
