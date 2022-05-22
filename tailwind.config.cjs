@@ -28,10 +28,13 @@ module.exports = {
   },
   safelist: [
     {
-      pattern: /btn-.+/,
+      pattern: /btn.+/,
     },
     {
       pattern: /opacity-.+/,
+    },
+    {
+      pattern: /outline-.+/,
     },
     'list-none',
   ],

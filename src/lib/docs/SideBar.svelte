@@ -15,7 +15,7 @@
   }
 </script>
 
-{#each pages as { name, items, showLine }}
+{#each pages as { name, items, showLine }, p (`pages-${p}`) }
   <ul class="menu menu-compact flex flex-col p-0 px-4">
     {#if name && name != 'excluded'}
       {#if showLine == undefined || showLine === true}
@@ -24,7 +24,7 @@
       <li class="menu-title"><span>{name}</span></li>
     {/if}
     {#if name != 'excluded'}
-      {#each items as { name, href, icon, badge, hidden }, i (i)}
+      {#each items as { name, href, icon, badge, hidden }, i (`items-${i}`) }
         {#if !hidden}
           <li>
             <a
