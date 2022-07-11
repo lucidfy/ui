@@ -12,12 +12,11 @@ declare namespace App {
 		session: string;
 	}
 
-	interface Platform { }
-
 	interface Session {
 		// lucid
 		user: any;
 	}
 
-	interface Stuff { }
+	// interface Platform { }
+	// interface Stuff { }
 }

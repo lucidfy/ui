@@ -1,11 +1,12 @@
 <script lang="ts">
-  import {coloredThemes} from '$lib/data'
+  import {coloredThemes} from '$src/lib/data'
   import type { Writable } from 'svelte/store';
   import { afterUpdate, getContext, onMount } from 'svelte'
   import hljs from 'highlight.js/lib/core'
   import go from 'highlight.js/lib/languages/go'
   import bash from 'highlight.js/lib/languages/bash'
   import json from 'highlight.js/lib/languages/json'
+  import diff from 'highlight.js/lib/languages/diff'
   import blackCodeStyle from 'svelte-highlight/styles/ir-black'
   import whiteCodeStyle from 'svelte-highlight/styles/atom-one-light'
 
@@ -36,6 +37,7 @@
         hljs.registerLanguage('go', go)
         hljs.registerLanguage('bash', bash)
         hljs.registerLanguage('json', json)
+        hljs.registerLanguage('diff', diff)
         hljs.highlightAll()
       }
     })

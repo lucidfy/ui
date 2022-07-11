@@ -11,7 +11,7 @@
 
 <main class="bg-orange-600 flex h-screen raleway font-thin">
   <div class="text-white m-auto">
-    <h1 class="text-8xl mb-5">
+    <h1 class="text-5xl md:text-8xl mb-5">
         Welcome to <a href="https://github.com/daison12006013/lucid" class="font-light">Lucid!</a>
     </h1>
 

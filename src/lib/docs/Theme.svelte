@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { themes } from "$lib/data"
+  import { themes } from "$src/lib/data"
   export let btnClasses = "btn-ghost"
   export let contentClasses = "mt-16"
   import { onMount } from "svelte";

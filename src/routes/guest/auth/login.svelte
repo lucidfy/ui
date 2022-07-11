@@ -1,7 +1,4 @@
 <script>
-  import Lucid from '$src/lib/guest/Lucid.svelte'
-  import { fly } from 'svelte/transition'
-
   export let email = ""
   export let password = ""
 

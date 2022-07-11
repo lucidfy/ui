@@ -83,14 +83,7 @@
                 {#each data.paginate.items as record, idx (idx)}
                 <tr>
                   <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="flex items-center">
-                      <div class="flex-shrink-0 h-10 w-10">
-                        <img class="h-10 w-10 rounded-full" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" alt="">
-                      </div>
-                      <div class="ml-4">
-                        <div class="text-sm font-medium text-gray-900">{ record.name }</div>
-                      </div>
-                    </div>
+                    <div class="text-sm font-medium text-gray-900">{ record.name }</div>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap">
                     <div class="text-sm text-gray-500">{ record.email }</div>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import Lucid from "$src/lib/guest/Lucid.svelte";
-  import Form from "$src/routes/guest/users/_form.svelte";
+  import Form from "../_form.svelte";
 
   export let title: string
   export let success: string

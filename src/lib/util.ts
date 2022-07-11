@@ -1,6 +1,6 @@
 export const slugFromPath = (path) => path.match(/([\w-]+)\.(svelte\.md|md|svx)/i)?.[1] ?? null
 
-export const readEnv = (id, defaultValue = '') => {
+export const readEnv = (id: any, defaultValue = '') => {
   if (import.meta.env[id] !== undefined) {
     return import.meta.env[id]
   }
@@ -8,11 +8,12 @@ export const readEnv = (id, defaultValue = '') => {
 }
 
 export const getOS = () => {
-  let userAgent = window.navigator.userAgent.toLowerCase(),
+  const userAgent = window.navigator.userAgent.toLowerCase(),
     macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i,
     windowsPlatforms = /(win32|win64|windows|wince)/i,
-    iosPlatforms = /(iphone|ipad|ipod)/i,
-    os = null
+    iosPlatforms = /(iphone|ipad|ipod)/i
+
+  let os = null
 
   if (macosPlatforms.test(userAgent)) {
     os = 'macos'
@@ -29,6 +30,6 @@ export const getOS = () => {
   return os
 }
 
-export const subString = (input, from, to) => {
+export const subString = (input: any, from: any, to: any) => {
   return input.slice(input.indexOf(from) + from.length, input.lastIndexOf(to))
 }

@@ -1,19 +1,9 @@
 import preprocess from 'svelte-preprocess'
-import { resolve } from 'path'
 // import adapterAuto from '@sveltejs/adapter-auto'
 // import adapterNode from '@sveltejs/adapter-node'
 import adapterStatic from '@sveltejs/adapter-static';
 
 let routeFolder = process.env.ROUTE_FOLDER
-let envPort = 3000
-switch (routeFolder) {
-  case 'guest':
-    envPort = 8331
-    break
-  case 'docs':
-    envPort = 8332
-    break
-}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -27,12 +17,14 @@ const config = {
 
   kit: {
     outDir: `.svelte-kit/${routeFolder}`,
+
     // adapter: adapterNode({
-    //   out: `build/${routeFolder}`,
+    //   out: `.build/${routeFolder}`,
     // }),
+
     adapter: adapterStatic({
-      pages: `build/${routeFolder}`,
-      assets: `build/${routeFolder}`,
+      pages: `.build/${routeFolder}`,
+      assets: `.build/${routeFolder}`,
       fallback: null
     }),
 
@@ -42,33 +34,9 @@ const config = {
     },
 
     files: {
-      routes: `src/routes/${routeFolder}`,
       hooks: `src/hooks/lucid.ts`,
-    },
-
-    vite: {
-      optimizeDeps: {
-        include: ["highlight.js", "highlight.js/lib/core"],
-      },
-      server: {
-        fs: {
-          strict: (process.env.NODE_ENV === 'production') ? true : false,
-        },
-        hmr: {
-          port: envPort,
-          clientPort: envPort,
-          protocol: 'ws',
-        },
-      },
-      resolve: {
-        alias: {
-          $src: resolve('./src'),
-          $lib: resolve('./src/lib'),
-          $stores: resolve('./src/stores'),
-          $assets: resolve('./src/assets'),
-          $icon: resolve('./node_modules/svelte-bootstrap-icons/lib'),
-        },
-      },
+      routes: `src/routes/${routeFolder}`,
+      template: `src/app.html`,
     },
   },
 }

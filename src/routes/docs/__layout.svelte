@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '$lib/tailwind-docs.css'
+  import '$src/lib/tailwind.css'
   import SideBar from '$src/lib/docs/SideBar.svelte'
   import Theme from '$src/lib/docs/Theme.svelte'
 
